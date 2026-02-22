@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>livecodeLA — Landing</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#links">Skip to links</a>
+
+  <main id="main" class="page" role="main">
+    <header class="site-header" role="banner">
+      <div class="logo-wrap">
+        <img id="logo" src="assets/logo_white.png" alt="livecodeLA logo" />
+      </div>
+   
+    </header>
+
+    <nav id="links" class="links" role="navigation" aria-label="Primary links"></nav>
+
+    <footer class="meta" role="contentinfo">
+    </footer>
+  </main>
+
+  <script>
+    // Edit this array to add/remove entries. Each item becomes a button.
+    const links = [
+      { label: 'Join Discord', url: 'https://discord.com/invite/cW9788YUmv', kind: 'primary' },
+      { label: 'Instagram', url: 'https://instagram.com/livecode.la', kind: 'ghost' },
+    ];
+
+    const container = document.getElementById('links');
+
+    function createLinkButton(item) {
+      const a = document.createElement('a');
+      a.className = `btn ${item.kind || 'ghost'}`;
+      a.href = item.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = item.label;
+      a.setAttribute('role', 'button');
+      a.setAttribute('aria-label', `${item.label} (opens in new tab)`);
+      return a;
+    }
+
+    links.forEach(l => container.appendChild(createLinkButton(l)));
+  </script>
+</body>
+</html>
