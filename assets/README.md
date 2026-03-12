@@ -1,14 +1,13 @@
-This folder holds site assets (logo, fonts, images).
+# livecodeLA.github.io
 
-Please add the following files when available:
+Landing page for livecodeLA. This site is a small accessible landing page that links to Discord and socials.
 
-- `assets/logo.png` — main square logo used on the landing page (recommended 512×512 PNG or SVG).
-- `assets/fonts/Hack-Regular.woff2` and `assets/fonts/Hack-Regular.woff` — Hack font files (regular weight). The CSS in `css/styles.css` expects these paths.
+To preview locally:
 
-Notes:
-- If you prefer WOFF2 only, provide `Hack-Regular.woff2` and remove the WOFF fallback in the CSS.
-- The page will fall back to system fonts if these are not present.
-Place your logo file here with the filename `logo.png`.
+```bash
+# from the repository root
+npm run dev
+# then open http://localhost:5173 in your browser
+```
 
-- Recommended size: 600x200 (transparent PNG or SVG also works if you rename to logo.png).
-- When you upload `assets/logo.png` the site will automatically show it on the page.
+
