@@ -4,7 +4,7 @@ type NavBarProps = {
     pages: string[];
 };
 
-const pages = ['Home', 'About', 'Join Discord', 'Follow on Instagram'];
+const pages = ['Home', 'About', 'Contact', 'Join Discord', 'Follow on Instagram'];
 
 function NavBar({ pages }: NavBarProps) {
 
