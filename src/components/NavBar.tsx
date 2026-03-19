@@ -4,7 +4,7 @@ type NavBarProps = {
     pages: string[];
 };
 
-const pages = ['Home', 'About', 'Contact', 'Join Discord', 'Follow on Instagram'];
+const pages = ['Home', 'About', 'Events', 'Contact', 'Join Discord', 'Follow on Instagram'];
 
 function NavBar({ pages }: NavBarProps) {
 
@@ -13,8 +13,8 @@ function NavBar({ pages }: NavBarProps) {
          <ul>
             {pages.map((page) => (
                 <li className={ page === 'Join Discord' || page === 'Follow on Instagram' ? 'social' : ''} key={page}>
-                    <Link
-                    to={
+                    <a
+                    href={
                         page === 'Join Discord'
                         ? 'https://discord.com/invite/cW9788YUmv'
                         : page === 'Follow on Instagram'
@@ -27,7 +27,7 @@ function NavBar({ pages }: NavBarProps) {
                     color="inherit"
                     >
                     {page}
-                    </Link>
+                    </a>
                 </li>
             ))}
         </ul>

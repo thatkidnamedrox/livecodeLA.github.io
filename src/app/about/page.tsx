@@ -1,5 +1,4 @@
-import { Banner } from "../components/Banner";
-
+import { Banner } from "../../components/Banner";
 const About = () => {
 
 return(
@@ -13,6 +12,7 @@ return(
      and specific live coding tools.
      livecodeLA facilitates interdisciplinary live coding events, as well as promotion of the algorave subculture,
      and aims to serve as a hub for generative art education and research.</p>
+     
 </div>
 </>
 );
