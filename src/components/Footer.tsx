@@ -10,12 +10,10 @@ export function Footer () {
             onReady={() => {
             const hydra = new Hydra({ detectAudio: false, width:0, height:0, canvas: document.getElementById('footer') as HTMLCanvasElement });
             speed = 0.0001;
-            s0.initImage("/livecodeLA_logo.svg");
+            s0.initImage("/livecodeLA_logo_2.svg");
             src(s0)
-            .scale(0.2)
-            .modulateScale(noise(() => 500 * Math.sin(time)))
-            .kaleid(1)
-            .pixelate(() => 100 - 100 * Math.sin(time * 0.01) + 5, () => 100 - 100 * Math.sin(time * 0.01) + 5)
+            .modulateKaleid(noise(() => 500 * Math.sin(time)))
+            .modulate(osc(() => 10 * Math.sin(time)))
             .out(o0);
         }}
             onError={(e: Error) => {

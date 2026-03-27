@@ -3,7 +3,7 @@ const About = () => {
 
 return(
 <>
-<Banner />
+<Banner/>
 <div>
     <h1>About livecodeLA</h1>
     <p>We are a community of live code enthusiasts in Los Angeles.

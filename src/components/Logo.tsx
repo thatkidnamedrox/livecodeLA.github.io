@@ -10,9 +10,9 @@ export function Logo () {
             onReady={() => {
             const hydra = new Hydra({ detectAudio: false, width:0, height:0, canvas: document.getElementById('logo') as HTMLCanvasElement });
             speed = 0.2;
-            s0.initImage("/livecodeLA_logo.svg");
+            s0.initImage("/livecodeLA_logo_2.svg");
             src(s0)
-            .pixelate(() => 1000 - 1000 * Math.sin(time * 0.1) + 5, () => 1000 - 1000 * Math.sin(time * 0.1) + 5)
+            .modulate(noise(() => 10 * Math.sin(time)))
             .out(o0);
              }}
             onError={(e: Error) => {

@@ -19,9 +19,9 @@ export interface PlannedEvent {
 }
 
 export async function getEvents() {
-    const databaseUrl = process.env.NEXT_PUBLIC_DATABASE_URL;
+    const databaseUrl = process.env.DATABASE_URL;
     if (!databaseUrl) {
-        throw new Error('Missing NEXT_PUBLIC_DATABASE_URL env var');
+        throw new Error('Missing DATABASE_URL env var');
     }
     const sql = neon(databaseUrl);
     try {
